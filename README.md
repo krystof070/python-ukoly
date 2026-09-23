@@ -1,4 +1,3 @@
 # python-ukoly
 
-Jméno: Kryštof Knol
-Třída: IT2B
+Jméno: Kryštof Knol, IT2B
