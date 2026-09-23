@@ -1,0 +1,8 @@
+jmeno = input("Jaké je vaše jméno?\n")
+obor = input("Jaký je váš obor?\n")
+zajmy = input("Jaké máte zájmy?\n")
+print("-------------------------------------")
+print("Jméno: " + jmeno)
+print("Obor: " + obor)
+print("Zájmy: " + zajmy)
+print("-------------------------------------")
