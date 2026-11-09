@@ -8,14 +8,18 @@ print(f"Myslím si číslo od 1 do 20. Hádej mé číslo! Máš na to {pokusy} 
 
 while tip != tajne_cislo:
     tip = int(input("Zadej svůj tip: "))
-    pokusy -= 1
-    if tip < tajne_cislo and pokusy > 0:
+    if tip < 1 or tip > 20:
+        print("Zadal jste číslo mimo interval!")
+    elif tip < tajne_cislo and pokusy > 0:
         print("Moje číslo je VĚTŠÍ")
+        pokusy -= 1
     elif tip > tajne_cislo and pokusy > 0:
         print("Moje číslo je MENŠÍ")
+        pokusy -= 1
     elif pokusy == 0:
-        print("Prohrál jsi, už nemáš žádné pokusy!")
+        print(f"Bohužel ti došly pokusy! Tajné číslo bylo {tajne_cislo}.")
         break
-
-if tip == tajne_cislo:
-    print(f"Grauluji, uhádl jsi moje číslo {tajne_cislo} a zbylo ti {pokusy} pokusů!")
+    elif tip == tajne_cislo:
+        pokusy -= 1
+        print(f"Gratuluji! Uhodl jsi číslo {tajne_cislo}, zbylo ti {pokusy} pokusů.")
+        break
